@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl2wqc8m1dv1j"
-path.s3tc="res://.godot/imported/LEMANSPREADER.png-1ba9a5bb7ef2a1eb765cb122821ebaa2.s3tc.ctex"
+uid="uid://cury4jso1pwur"
+path.s3tc="res://.godot/imported/LEMANSPREADERHAPPY.png-e301b5efeb3583cba1554e50fd344760.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/LEMANSPREADER.png"
-dest_files=["res://.godot/imported/LEMANSPREADER.png-1ba9a5bb7ef2a1eb765cb122821ebaa2.s3tc.ctex"]
+source_file="res://Assets/LEMANSPREADERHAPPY.png"
+dest_files=["res://.godot/imported/LEMANSPREADERHAPPY.png-e301b5efeb3583cba1554e50fd344760.s3tc.ctex"]
 
 [params]
 
