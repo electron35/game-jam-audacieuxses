@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="DialogList" load_steps=7 format=3 uid="uid://d0xy1i31wmho0"]
+
+[ext_resource type="Script" uid="uid://cwx1i7qfsowx4" path="res://Scripts/classes/dialog_data.gd" id="1_pu1e3"]
+[ext_resource type="Script" uid="uid://tek1yyoln75s" path="res://Scripts/classes/dialog_list.gd" id="1_wblq2"]
+
+[sub_resource type="Resource" id="Resource_11j3o"]
+script = ExtResource("1_pu1e3")
+sentence = "La méritocratie est un mensonge aux services des riches !"
+answer = "Answer1"
+metadata/_custom_type_script = "uid://cwx1i7qfsowx4"
+
+[sub_resource type="Resource" id="Resource_pu1e3"]
+script = ExtResource("1_pu1e3")
+sentence = "C'est cool d'être venus à autant pour la lecture drag, on va bientôt commencer."
+answer = "Answer2"
+metadata/_custom_type_script = "uid://cwx1i7qfsowx4"
+
+[sub_resource type="Resource" id="Resource_fvqmc"]
+script = ExtResource("1_pu1e3")
+sentence = "Bah alors mon grand, c'est ton papa qui a choisit tes pronoms ?"
+answer = "Gné ?"
+metadata/_custom_type_script = "uid://cwx1i7qfsowx4"
+
+[sub_resource type="Resource" id="Resource_qsae8"]
+script = ExtResource("1_pu1e3")
+sentence = "I cast Taxation des dividendes"
+answer = "Tout mais pas ça !!!"
+metadata/_custom_type_script = "uid://cwx1i7qfsowx4"
+
+[resource]
+script = ExtResource("1_wblq2")
+list = Array[ExtResource("1_pu1e3")]([SubResource("Resource_11j3o"), SubResource("Resource_pu1e3"), SubResource("Resource_fvqmc"), SubResource("Resource_qsae8")])
+metadata/_custom_type_script = "uid://tek1yyoln75s"
