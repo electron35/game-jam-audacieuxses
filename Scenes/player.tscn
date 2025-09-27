@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4a3t8yuyh307"]
+
+[ext_resource type="Script" uid="uid://bqolw5iehqdig" path="res://Scripts/player.gd" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://drsqq43yu2jb5" path="res://Scripts/Interact.gd" id="2_cvnsp"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_v0iea"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18827522, 0)
+script = ExtResource("1_v0iea")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.005018, 0)
+mesh = SubResource("CapsuleMesh_v0iea")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.013994, 0)
+shape = SubResource("CapsuleShape3D_onrkg")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75615287, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87177587, 0)
+
+[node name="Control" type="Control" parent="Head/Camera3D"]
+layout_mode = 3
+anchor_right = 0.19100001
+anchor_bottom = 0.053000003
+offset_right = -190.03201
+offset_bottom = -15.344002
+
+[node name="Label" type="Label" parent="Head/Camera3D/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41300002
+anchor_top = 0.14
+anchor_right = 0.578
+anchor_bottom = 0.17600001
+offset_left = 0.2239685
+offset_top = 0.13999939
+offset_right = 0.14398193
+offset_bottom = -0.22400665
+text = "BONJOUR JE SUIS UNE UI"
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 0.011222202, -0.99993706, 0, 0.99993706, 0.011222202, -5.7458878e-05, -1.1920929e-07, -0.5399309)
+target_position = Vector3(0, -5, 0)
+collision_mask = 2
+debug_shape_custom_color = Color(1, 0, 0, 0.5058824)
+debug_shape_thickness = 5
+script = ExtResource("2_cvnsp")
