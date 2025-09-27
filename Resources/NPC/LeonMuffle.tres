@@ -1,8 +1,12 @@
-[gd_resource type="Resource" script_class="NPC_Data" load_steps=2 format=3 uid="uid://dnshr6f4nrqjl"]
+[gd_resource type="Resource" script_class="NPC_Data" load_steps=4 format=3 uid="uid://dnshr6f4nrqjl"]
 
+[ext_resource type="Texture2D" uid="uid://bl2wqc8m1dv1j" path="res://Assets/LEMANSPREADERSAD.png" id="1_5cv6q"]
 [ext_resource type="Script" uid="uid://dhoyjce7t6tul" path="res://Scripts/classes/NPC_Data.gd" id="1_y2h2w"]
+[ext_resource type="Texture2D" uid="uid://cury4jso1pwur" path="res://Assets/LEMANSPREADERHAPPY.png" id="2_o1ayt"]
 
 [resource]
 script = ExtResource("1_y2h2w")
 name = "Léon Muffle"
+UnarmedFace = ExtResource("2_o1ayt")
+HurtedFace = ExtResource("1_5cv6q")
 metadata/_custom_type_script = "uid://dhoyjce7t6tul"

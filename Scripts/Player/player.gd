@@ -42,9 +42,9 @@ func _physics_process(delta: float) -> void:
 
 		move_and_slide()
 
-func  open_dialog(Npc:StaticBody3D) -> void:
+func  open_dialog(Npc:NPC) -> void:
 	print(Npc.data.name)
-	dialog.visible = true
+	dialog.start_dialog(Npc)
 
 func _on_dialog_box_visibility_changed() -> void:
 	if (dialog != null && dialog.visible):

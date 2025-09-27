@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://d4a3t8yuyh307"]
 
-[ext_resource type="Script" uid="uid://bqolw5iehqdig" path="res://Scripts/player.gd" id="1_v0iea"]
-[ext_resource type="Script" uid="uid://0lrkciq870up" path="res://dialog.gd" id="2_6t5aa"]
-[ext_resource type="Script" uid="uid://drsqq43yu2jb5" path="res://Scripts/Interact.gd" id="2_cvnsp"]
+[ext_resource type="Script" uid="uid://bqolw5iehqdig" path="res://Scripts/Player/player.gd" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://0lrkciq870up" path="res://Scripts/Player/dialog.gd" id="2_6t5aa"]
+[ext_resource type="Script" uid="uid://drsqq43yu2jb5" path="res://Scripts/Player/Interact.gd" id="2_cvnsp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_v0iea"]
 
@@ -65,6 +65,7 @@ offset_top = 15.0
 offset_right = -196.01605
 offset_bottom = -14.0
 text = "CHOIX 1"
+autowrap_mode = 2
 
 [node name="Choice2" type="Button" parent="Head/Camera3D/UIControl/DialogBox"]
 layout_mode = 1
@@ -77,6 +78,7 @@ offset_top = 15.0
 offset_right = -13.0
 offset_bottom = -14.0
 text = "CHOIX 2"
+autowrap_mode = 2
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 0.011222202, -0.99993706, 0, 0.99993706, 0.011222202, -5.7458878e-05, -1.1920929e-07, -0.5399309)
@@ -87,3 +89,5 @@ debug_shape_thickness = 5
 script = ExtResource("2_cvnsp")
 
 [connection signal="visibility_changed" from="Head/Camera3D/UIControl/DialogBox" to="." method="_on_dialog_box_visibility_changed"]
+[connection signal="pressed" from="Head/Camera3D/UIControl/DialogBox/Choice1" to="Head/Camera3D/UIControl/DialogBox" method="_on_choice_1_pressed"]
+[connection signal="pressed" from="Head/Camera3D/UIControl/DialogBox/Choice2" to="Head/Camera3D/UIControl/DialogBox" method="_on_choice_2_pressed"]
