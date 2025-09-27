@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="NPC_Data" load_steps=2 format=3 uid="uid://dnshr6f4nrqjl"]
+
+[ext_resource type="Script" uid="uid://dhoyjce7t6tul" path="res://Scripts/classes/NPC_Data.gd" id="1_y2h2w"]
+
+[resource]
+script = ExtResource("1_y2h2w")
+name = "Léon Muffle"
+metadata/_custom_type_script = "uid://dhoyjce7t6tul"

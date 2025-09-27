@@ -1,11 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://cic1yiqgeesod"]
+[gd_scene load_steps=6 format=3 uid="uid://cic1yiqgeesod"]
 
+[ext_resource type="Script" uid="uid://dv132uidklika" path="res://Scenes/npc.gd" id="1_fo5tq"]
 [ext_resource type="Texture2D" uid="uid://bl2wqc8m1dv1j" path="res://Assets/LEMANSPREADER.png" id="1_tdvfm"]
+[ext_resource type="Resource" uid="uid://dnshr6f4nrqjl" path="res://Resources/NPC/LeonMuffle.tres" id="2_xs5w8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tdvfm"]
 radius = 0.125
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tdvfm"]
+radius = 1.2788086
+
 [node name="Npc" type="StaticBody3D"]
+script = ExtResource("1_fo5tq")
+data = ExtResource("2_xs5w8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_tdvfm")
@@ -14,3 +21,12 @@ shape = SubResource("CapsuleShape3D_tdvfm")
 transform = Transform3D(0.36745763, 0, 0, 0, 0.36745763, 0, 0, 0, 1, 0, 0, 0)
 billboard = 2
 texture = ExtResource("1_tdvfm")
+
+[node name="InteractionArea" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="InteractionCollision" type="CollisionShape3D" parent="InteractionArea"]
+shape = SubResource("CylinderShape3D_tdvfm")
+
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]

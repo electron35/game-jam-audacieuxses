@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.003
@@ -8,7 +7,7 @@ const SENSITIVITY = 0.003
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var raycast: RayCast3D = $Head/Camera3D/RayCast3D
-
+@onready var dialog: Control = $Head/Camera3D/UIControl/DialogBox
 
 func _ready()  -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -31,13 +30,24 @@ func _physics_process(delta: float) -> void:
 #	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 #		velocity.y = JUMP_VELOCITY
 
-	var input_dir := Input.get_vector("Left", "Right", "Forward", "Back")
-	var direction := (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = 0.0
-		velocity.z = 0.0
+	if (!dialog.visible):
+		var input_dir := Input.get_vector("Left", "Right", "Forward", "Back")
+		var direction := (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		if direction:
+			velocity.x = direction.x * SPEED
+			velocity.z = direction.z * SPEED
+		else:
+			velocity.x = 0.0
+			velocity.z = 0.0
 
-	move_and_slide()
+		move_and_slide()
+
+func  open_dialog(Npc:StaticBody3D) -> void:
+	print(Npc.data.name)
+	dialog.visible = true
+
+func _on_dialog_box_visibility_changed() -> void:
+	if (dialog != null && dialog.visible):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

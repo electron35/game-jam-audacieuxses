@@ -8,3 +8,4 @@ func _input(event):
 		if (get_collider()!=null):
 			testing = get_collider()
 			print(testing.name)
+			
