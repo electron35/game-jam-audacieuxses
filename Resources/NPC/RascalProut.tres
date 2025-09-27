@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="NPC_Data" load_steps=4 format=3 uid="uid://crdvxi0j4y5lr"]
 
 [ext_resource type="Script" uid="uid://dhoyjce7t6tul" path="res://Scripts/classes/npc_data.gd" id="1_k8n0x"]
-[ext_resource type="Texture2D" uid="uid://dhrubv0gfj4xm" path="res://Assets/Sprite/Prout_crying.png" id="1_n7kmv"]
-[ext_resource type="Texture2D" uid="uid://c4c3jea8y5foo" path="res://Assets/Sprite/Prout_clean.png" id="2_tcj3a"]
+[ext_resource type="Texture2D" uid="uid://dhrubv0gfj4xm" path="res://Assets/Sprites/Prout_crying.png" id="1_n7kmv"]
+[ext_resource type="Texture2D" uid="uid://c4c3jea8y5foo" path="res://Assets/Sprites/Prout_clean.png" id="2_tcj3a"]
 
 [resource]
 script = ExtResource("1_k8n0x")

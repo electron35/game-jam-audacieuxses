@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mgimertwk1be"
-path="res://.godot/imported/Muffle_crying.png-29890d75a63f2bf5ef7b2f671a6563e1.ctex"
+uid="uid://h30w62pj5rtb"
+path="res://.godot/imported/right_arm_throw_rough4.png-151901d599606832d9ca5e5235a42230.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Muffle_crying.png"
-dest_files=["res://.godot/imported/Muffle_crying.png-29890d75a63f2bf5ef7b2f671a6563e1.ctex"]
+source_file="res://Assets/UI/Wand/right_arm_throw_rough4.png"
+dest_files=["res://.godot/imported/right_arm_throw_rough4.png-151901d599606832d9ca5e5235a42230.ctex"]
 
 [params]
 

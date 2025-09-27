@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="InteractibleData" load_steps=4 format=3 uid="uid://boqrt15end6vi"]
 
 [ext_resource type="Script" uid="uid://d2mqmgjq8u17f" path="res://Scripts/classes/interactible_data.gd" id="1_5k2l8"]
-[ext_resource type="Texture2D" uid="uid://dafee03r5bijd" path="res://Assets/Sprite/Item/BBQ_VG.png" id="1_qi036"]
-[ext_resource type="Texture2D" uid="uid://fkl6p7q0bg2c" path="res://Assets/Sprite/Item/BBQ_Viande.png" id="2_7moeh"]
+[ext_resource type="Texture2D" uid="uid://dafee03r5bijd" path="res://Assets/Sprites/Items/BBQ_VG.png" id="1_qi036"]
+[ext_resource type="Texture2D" uid="uid://fkl6p7q0bg2c" path="res://Assets/Sprites/Items/BBQ_Viande.png" id="2_7moeh"]
 
 [resource]
 script = ExtResource("1_5k2l8")

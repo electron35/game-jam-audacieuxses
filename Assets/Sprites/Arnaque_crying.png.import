@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btip4i4gugxw3"
-path="res://.godot/imported/Arnaque_clean.png-0ca66ecaf278a748595caab8d0454895.ctex"
+uid="uid://dv041xetnvqgq"
+path="res://.godot/imported/Arnaque_crying.png-cd14129db068ffc6056902701d31a79c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Arnaque_clean.png"
-dest_files=["res://.godot/imported/Arnaque_clean.png-0ca66ecaf278a748595caab8d0454895.ctex"]
+source_file="res://Assets/Sprites/Arnaque_crying.png"
+dest_files=["res://.godot/imported/Arnaque_crying.png-cd14129db068ffc6056902701d31a79c.ctex"]
 
 [params]
 

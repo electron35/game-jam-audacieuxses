@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://btjfqjnlmos34"]
+
+[ext_resource type="Script" uid="uid://pg1bf41h3lgr" path="res://Scripts/Interactible/interactible_3d.gd" id="1_dlh0l"]
+[ext_resource type="PackedScene" uid="uid://ce7xadtnpg7bf" path="res://Assets/Models/UglyCar.glb" id="1_xuw3d"]
+[ext_resource type="PackedScene" uid="uid://c0280anxl81yx" path="res://Scenes/particle.tscn" id="2_2unab"]
+[ext_resource type="PackedScene" uid="uid://bnmq1vsco8tny" path="res://Assets/Models/UglyCarBroken.glb" id="2_tn7gv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dlh0l"]
+size = Vector3(6.245056, 1, 2.4144897)
+
+[node name="UglyCar" type="StaticBody3D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_dlh0l")
+
+[node name="Particle" parent="." instance=ExtResource("2_2unab")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18417358, 0.5585327, -0.031829834)
+shape = SubResource("BoxShape3D_dlh0l")
+
+[node name="CleanState" parent="." instance=ExtResource("1_xuw3d")]
+
+[node name="BrokenState" parent="." instance=ExtResource("2_tn7gv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7274446, 0)
+visible = false

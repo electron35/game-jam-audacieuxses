@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InteractibleData" load_steps=4 format=3 uid="uid://dylf8umw6yte7"]
+
+[ext_resource type="Texture2D" uid="uid://d00qu1xf12ygv" path="res://Assets/Sprites/Bank_break.png" id="1_y65hk"]
+[ext_resource type="Texture2D" uid="uid://bf5idr1o0xpix" path="res://Assets/Sprites/Bank_clear.png" id="2_3k7sn"]
+[ext_resource type="Script" uid="uid://d2mqmgjq8u17f" path="res://Scripts/classes/interactible_data.gd" id="3_glbaq"]
+
+[resource]
+script = ExtResource("3_glbaq")
+BeforeTexture = ExtResource("2_3k7sn")
+AfterTexture = ExtResource("1_y65hk")
+metadata/_custom_type_script = "uid://d2mqmgjq8u17f"

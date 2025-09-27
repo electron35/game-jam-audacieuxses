@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://kub2doyo41y3"]
+
+[ext_resource type="Texture2D" uid="uid://dibdye3yony32" path="res://Assets/UI/chrono.png" id="1_fgi8r"]
+[ext_resource type="Script" uid="uid://de83menu2bl5g" path="res://Scripts/timer_clock.gd" id="1_yiyjv"]
+[ext_resource type="Texture2D" uid="uid://c8waiofo1fnx0" path="res://Assets/UI/chrono_arrow.png" id="2_vegd7"]
+[ext_resource type="Texture2D" uid="uid://dl4cp2ttj2m6k" path="res://Assets/UI/chrono_burning_1.png" id="3_yiyjv"]
+[ext_resource type="Texture2D" uid="uid://ds2crjkgtg8pm" path="res://Assets/UI/chrono_burning_2.png" id="4_8yvbo"]
+[ext_resource type="Texture2D" uid="uid://bu48mcr06tnrk" path="res://Assets/UI/chrono_burning_3.png" id="5_gxpnl"]
+[ext_resource type="Texture2D" uid="uid://6r4l5q8wc8lu" path="res://Assets/UI/chrono_burning_4.png" id="6_i8m3h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hiagx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_yiyjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8yvbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gxpnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i8m3h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="TimerClock" type="Control"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+script = ExtResource("1_yiyjv")
+
+[node name="Chrono" type="Sprite2D" parent="."]
+texture = ExtResource("1_fgi8r")
+
+[node name="ChronoArrow" type="Sprite2D" parent="."]
+rotation = -1.5707964
+texture = ExtResource("2_vegd7")
+offset = Vector2(73.32594, 4.107483)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 55)
+sprite_frames = SubResource("SpriteFrames_hiagx")
+autoplay = "default"
+frame_progress = 0.3276322
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true

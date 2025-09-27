@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhrubv0gfj4xm"
-path="res://.godot/imported/Prout_crying.png-2d36483594b48ee387ea04a07262118c.ctex"
+uid="uid://dafee03r5bijd"
+path="res://.godot/imported/BBQ_VG.png-df5813d278c381f34ba32a1d72c0b994.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/Prout_crying.png"
-dest_files=["res://.godot/imported/Prout_crying.png-2d36483594b48ee387ea04a07262118c.ctex"]
+source_file="res://Assets/Sprites/Items/BBQ_VG.png"
+dest_files=["res://.godot/imported/BBQ_VG.png-df5813d278c381f34ba32a1d72c0b994.ctex"]
 
 [params]
 

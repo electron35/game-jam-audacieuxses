@@ -4,10 +4,9 @@ extends RayCast3D
 
 func _input(event):
 	if event.is_action_pressed("Shoot"):
-		print("shoot")
+		wand.play("default")
 		var item:Node3D
 		if (get_collider()!=null):
-			wand.play("default")
 			item = get_collider()
 			item.spell()
 		

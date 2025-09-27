@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dxrip0m06ryj5"]
 
-[ext_resource type="Script" uid="uid://dp6lswccxnood" path="res://Scripts/interactible.gd" id="1_dmt2u"]
-[ext_resource type="Texture2D" uid="uid://fkl6p7q0bg2c" path="res://Assets/Sprite/Item/BBQ_Viande.png" id="1_ttwp4"]
+[ext_resource type="Script" uid="uid://dp6lswccxnood" path="res://Scripts/Interactible/interactible.gd" id="1_dmt2u"]
+[ext_resource type="Texture2D" uid="uid://fkl6p7q0bg2c" path="res://Assets/Sprites/Items/BBQ_Viande.png" id="1_ttwp4"]
 [ext_resource type="Resource" uid="uid://boqrt15end6vi" path="res://Resources/Interactible/BBQ.tres" id="2_hql6q"]
 [ext_resource type="PackedScene" uid="uid://c0280anxl81yx" path="res://Scenes/particle.tscn" id="3_gohnf"]
 

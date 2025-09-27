@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h30w62pj5rtb"
-path="res://.godot/imported/right_arm_throw_rough4.png-f76d6ab5b34bcf7c9296f7b5eb31fd9e.ctex"
+uid="uid://6r4l5q8wc8lu"
+path="res://.godot/imported/chrono_burning_4.png-39fe5ca1f6f420f5db5adeb9945a76ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Wand/right_arm_throw_rough4.png"
-dest_files=["res://.godot/imported/right_arm_throw_rough4.png-f76d6ab5b34bcf7c9296f7b5eb31fd9e.ctex"]
+source_file="res://Assets/UI/chrono_burning_4.png"
+dest_files=["res://.godot/imported/chrono_burning_4.png-39fe5ca1f6f420f5db5adeb9945a76ff.ctex"]
 
 [params]
 

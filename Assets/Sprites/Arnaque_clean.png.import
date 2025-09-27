@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pirq0xudut36"
-path="res://.godot/imported/right_arm_throw_rough1.png-bc61de5c76190ec58934f9cb978a0077.ctex"
+uid="uid://btip4i4gugxw3"
+path="res://.godot/imported/Arnaque_clean.png-4597c0f7184c4332ee530191a99b3048.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Wand/right_arm_throw_rough1.png"
-dest_files=["res://.godot/imported/right_arm_throw_rough1.png-bc61de5c76190ec58934f9cb978a0077.ctex"]
+source_file="res://Assets/Sprites/Arnaque_clean.png"
+dest_files=["res://.godot/imported/Arnaque_clean.png-4597c0f7184c4332ee530191a99b3048.ctex"]
 
 [params]
 
