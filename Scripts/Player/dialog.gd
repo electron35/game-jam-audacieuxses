@@ -31,7 +31,6 @@ func start_dialog(_npc:NPC) -> void:
 	
 func end_dialog(btn:Button) -> void:
 	npc.cry(btn==strongButton)
-	
 	self.visible = false
 
 func _on_choice_1_pressed() -> void:

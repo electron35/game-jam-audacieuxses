@@ -23,7 +23,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(80))
 
 func _physics_process(delta: float) -> void:
-
+	
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -39,11 +40,9 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = 0.0
 			velocity.z = 0.0
-
 		move_and_slide()
 
 func  open_dialog(Npc:NPC) -> void:
-	print(Npc.data.name)
 	dialog.start_dialog(Npc)
 
 func _on_dialog_box_visibility_changed() -> void:
