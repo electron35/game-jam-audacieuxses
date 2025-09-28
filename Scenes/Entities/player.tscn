@@ -1,14 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://d4a3t8yuyh307"]
+[gd_scene load_steps=10 format=3 uid="uid://d4a3t8yuyh307"]
 
 [ext_resource type="Script" uid="uid://bqolw5iehqdig" path="res://Scripts/Player/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://0lrkciq870up" path="res://Scripts/Player/dialog.gd" id="2_6t5aa"]
 [ext_resource type="Script" uid="uid://drsqq43yu2jb5" path="res://Scripts/Player/Interact.gd" id="2_cvnsp"]
 [ext_resource type="SpriteFrames" uid="uid://bxtbhsvady6ta" path="res://Resources/Animation/wand.tres" id="2_svftf"]
 [ext_resource type="PackedScene" uid="uid://kub2doyo41y3" path="res://Scenes/UI/TimerClock.tscn" id="4_a1rq5"]
+[ext_resource type="Texture2D" uid="uid://lo3yp5d26tuj" path="res://Assets/UI/viseur.png" id="5_yqx0t"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_v0iea"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ofjh0"]
+texture = ExtResource("5_yqx0t")
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18827522, 0)
@@ -84,6 +88,22 @@ offset_top = 85.0
 offset_right = 7.0
 offset_bottom = 85.0
 scale = Vector2(0.36000246, 0.36000246)
+
+[node name="Panel" type="Panel" parent="Head/Camera3D/UIControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ofjh0")
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 0.011222202, -0.99993706, 0, 0.99993706, 0.011222202, -5.7458878e-05, -1.1920929e-07, -0.5399309)

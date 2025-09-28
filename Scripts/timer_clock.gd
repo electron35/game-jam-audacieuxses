@@ -6,15 +6,14 @@ extends Control
 @onready var timer: Timer = $Timer
 
 
+var wait_time:float
 
 func _ready() -> void:
+	wait_time = timer.wait_time
 	timer.start()
-	
 
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	chrono_arrow.rotate(deg_to_rad(6)*delta)
-	
-	
+	chrono_arrow.rotate(deg_to_rad(360/wait_time)*delta)
+
+func _on_timer_timeout() -> void:
+	Global.EndGame()

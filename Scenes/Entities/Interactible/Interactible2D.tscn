@@ -12,6 +12,7 @@ collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_dmt2u")
 data = ExtResource("2_hql6q")
+break_value = null
 
 [node name="Particle" parent="." instance=ExtResource("3_gohnf")]
 

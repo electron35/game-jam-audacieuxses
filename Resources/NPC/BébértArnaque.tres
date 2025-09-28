@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="NPC_Data" load_steps=4 format=3 uid="uid://b7bt4v20h5h54"]
+
+[ext_resource type="Texture2D" uid="uid://dv041xetnvqgq" path="res://Assets/Sprites/Arnaque_crying.png" id="1_bdi1h"]
+[ext_resource type="Script" uid="uid://dhoyjce7t6tul" path="res://Scripts/classes/npc_data.gd" id="1_lbpjr"]
+[ext_resource type="Texture2D" uid="uid://btip4i4gugxw3" path="res://Assets/Sprites/Arnaque_clean.png" id="2_3bsba"]
+
+[resource]
+script = ExtResource("1_lbpjr")
+name = "BébertArnaque"
+strongChoice = "*Agite les mains* ISF !!! Taxe confiscatoire !!! "
+strongResponse = "Mais comment peut-on vivre avec moins de 70 maisons?"
+UnarmedFace = ExtResource("2_3bsba")
+HurtedFace = ExtResource("1_bdi1h")
+metadata/_custom_type_script = "uid://dhoyjce7t6tul"

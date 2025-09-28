@@ -31,6 +31,7 @@ func _on_interaction_area_body_entered(body: Node3D) -> void:
 		
 func cry(isStrong:bool): #Fonction qui se déclenche lorsqu'on a répondu à l'interaction
 	var textData = data.strongResponse if isStrong else data.weakResponse
+	Global.Score += 1 + (1 if isStrong else 0)
 	crying = true
 	sprite.texture=data.HurtedFace
 	speech.display_text = textData

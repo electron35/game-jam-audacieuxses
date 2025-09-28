@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://rmv8sxhmdkni"]
+[gd_scene load_steps=11 format=3 uid="uid://rmv8sxhmdkni"]
 
 [ext_resource type="PackedScene" uid="uid://d4a3t8yuyh307" path="res://Scenes/Entities/player.tscn" id="1_52fb6"]
 [ext_resource type="PackedScene" uid="uid://dxrip0m06ryj5" path="res://Scenes/Entities/Interactible/Interactible2D.tscn" id="2_6l7je"]
@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://crdvxi0j4y5lr" path="res://Resources/NPC/RascalProut.tres" id="4_x6ack"]
 [ext_resource type="PackedScene" uid="uid://btjfqjnlmos34" path="res://Scenes/Entities/Interactible/Interactible3D.tscn" id="5_iacmt"]
 [ext_resource type="PackedScene" uid="uid://c1vn3vcjut82r" path="res://Scenes/Entities/Interactible/InteractibleFacade.tscn" id="6_6ev3c"]
+[ext_resource type="Resource" uid="uid://b7bt4v20h5h54" path="res://Resources/NPC/BébértArnaque.tres" id="7_maf8m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_52fb6"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -39,6 +40,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010686159, 0.09287232, -0.
 
 [node name="Interactible" parent="." instance=ExtResource("2_6l7je")]
 transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -3.1046362, 0.63148975, 2.3146038)
+break_value = 1
 
 [node name="LeonMuffle" parent="." instance=ExtResource("3_jv6wh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5414073, -0.04277259, -0.8919401)
@@ -49,6 +51,12 @@ data = ExtResource("4_x6ack")
 
 [node name="UglyCar" parent="." instance=ExtResource("5_iacmt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.108013, 0.58260435, 3.2201107)
+break_value = 1
 
 [node name="InteractibleFacade" parent="." instance=ExtResource("6_6ev3c")]
 transform = Transform3D(0.35817868, 0, 0, 0, 0.35817868, 0, 0, 0, 0.35817868, -1.1620103, 0.28436494, -6.1348124)
+break_value = 1
+
+[node name="Npc" parent="." instance=ExtResource("3_jv6wh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9882636, 0.009523153, -3.0122461)
+data = ExtResource("7_maf8m")

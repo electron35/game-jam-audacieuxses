@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx3wxgqf8c684"]
+
+[ext_resource type="Script" uid="uid://ddg2eqesus4bn" path="res://Scripts/score.gd" id="1_yub21"]
+[ext_resource type="Theme" uid="uid://bdppe4xcscq8r" path="res://Resources/MenuTheme.tres" id="2_mtq4d"]
+
+[node name="Score" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yub21")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 206
+text = "INCROYABLE"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -450.0
+offset_top = -215.0
+offset_right = -66.0
+offset_bottom = -74.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_mtq4d")
+text = "Menu"
+text_overrun_behavior = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

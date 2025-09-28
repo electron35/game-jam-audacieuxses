@@ -3,6 +3,7 @@ extends StaticBody3D
 class_name Interactible
 
 @export var data:InteractibleData
+@export var break_value:int
 
 @onready var sprite: Sprite3D = $Sprite3D
 @onready var particle: GPUParticles3D = $Particle
@@ -21,3 +22,4 @@ func spell():
 	if (!broken):
 		broken=true
 		particle.emitting=true
+		Global.Score+=break_value
