@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2sn6spxpowlv"]
+
+[ext_resource type="AudioStream" uid="uid://coq4pmuqarac7" path="res://Resources/Musiques/music_bad_end.wav" id="1_n101k"]
+
+[node name="music_bad_end" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_n101k")
+volume_db = -15.0

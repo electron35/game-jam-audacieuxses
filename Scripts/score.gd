@@ -4,6 +4,8 @@ extends Control
 @onready var ui_game_over: Sprite2D = $UiGameOver
 @onready var option_good_end_3: Sprite2D = $OptionGoodEnd3
 @onready var label: Label = $Label
+@onready var music_bad_end: AudioStreamPlayer = $music_bad_end
+@onready var music_good_end: AudioStreamPlayer = $music_good_end
 
 
 func _ready() -> void:
@@ -16,10 +18,12 @@ func _ready() -> void:
 		ui_winning.visible = false
 		option_good_end_3.visible = false
 		ui_game_over.visible = true
+		music_bad_end.play()
 	else:
 		ui_game_over.visible = false
 		option_good_end_3.visible = true
 		ui_winning.visible = true
+		music_good_end.play(	)
 	
 
 

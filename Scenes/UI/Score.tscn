@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cx3wxgqf8c684"]
+[gd_scene load_steps=9 format=3 uid="uid://cx3wxgqf8c684"]
 
 [ext_resource type="Script" uid="uid://ddg2eqesus4bn" path="res://Scripts/score.gd" id="1_yub21"]
 [ext_resource type="Texture2D" uid="uid://bd160vy2n16pg" path="res://Assets/UI/Option_GoodEnd_3.png" id="2_3fuo5"]
 [ext_resource type="Theme" uid="uid://bdppe4xcscq8r" path="res://Resources/MenuTheme.tres" id="2_mtq4d"]
 [ext_resource type="Texture2D" uid="uid://bh5im17fqlyfy" path="res://Assets/UI/ui_winning.png" id="3_atwjb"]
 [ext_resource type="Texture2D" uid="uid://d1h5ti8dumed5" path="res://Assets/UI/ui_game_over.png" id="4_3fuo5"]
+[ext_resource type="AudioStream" uid="uid://coq4pmuqarac7" path="res://Resources/Musiques/music_bad_end.wav" id="6_wq4n8"]
+[ext_resource type="AudioStream" uid="uid://cam37c5kirgg" path="res://Resources/Musiques/music_good_end.wav" id="7_y0w4a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fuo5"]
 bg_color = Color(0.31431612, 0.31431612, 0.31431603, 0.8392157)
@@ -67,5 +69,13 @@ text = "sdsdss sdqsdqsd qsd qs dqsd qsd qs  dqsdqsdqsd"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="music_bad_end" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_wq4n8")
+volume_db = -15.0
+
+[node name="music_good_end" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_y0w4a")
+volume_db = -15.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
