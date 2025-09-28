@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d4a3t8yuyh307"]
+[gd_scene load_steps=13 format=3 uid="uid://d4a3t8yuyh307"]
 
 [ext_resource type="Script" uid="uid://bqolw5iehqdig" path="res://Scripts/Player/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://0lrkciq870up" path="res://Scripts/Player/dialog.gd" id="2_6t5aa"]
@@ -8,6 +8,7 @@
 [ext_resource type="Theme" uid="uid://dcgcd5sggj3c" path="res://Resources/GameTheme.tres" id="4_ofjh0"]
 [ext_resource type="Texture2D" uid="uid://lo3yp5d26tuj" path="res://Assets/UI/viseur.png" id="5_yqx0t"]
 [ext_resource type="AudioStream" uid="uid://b7aqp1l5yb6a5" path="res://Resources/Sons/projectile_throw.mp3" id="8_2hnfo"]
+[ext_resource type="AudioStream" uid="uid://du4jcefexbiuh" path="res://Resources/Sons/projectile_impact.mp3" id="9_y18yp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_v0iea"]
 
@@ -117,9 +118,13 @@ debug_shape_custom_color = Color(1, 0, 0, 0.5058824)
 debug_shape_thickness = 5
 script = ExtResource("2_cvnsp")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Head/Camera3D/RayCast3D"]
+[node name="projectile_throw" type="AudioStreamPlayer" parent="Head/Camera3D/RayCast3D"]
 stream = ExtResource("8_2hnfo")
 volume_db = -10.0
+
+[node name="projectile_impact" type="AudioStreamPlayer" parent="Head/Camera3D/RayCast3D"]
+stream = ExtResource("9_y18yp")
+volume_db = -20.0
 
 [connection signal="visibility_changed" from="Head/Camera3D/UIControl/DialogBox" to="." method="_on_dialog_box_visibility_changed"]
 [connection signal="pressed" from="Head/Camera3D/UIControl/DialogBox/Choice1" to="Head/Camera3D/UIControl/DialogBox" method="_on_choice_1_pressed"]
