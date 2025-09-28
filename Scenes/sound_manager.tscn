@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dayqofvfjslr8"]
+
+[ext_resource type="AudioStream" uid="uid://cvfb5cfahw6d6" path="res://Resources/Musiques/music_game.wav" id="1_32i44"]
+
+[node name="SoundManager" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_32i44")
+volume_db = -20.0
+autoplay = true

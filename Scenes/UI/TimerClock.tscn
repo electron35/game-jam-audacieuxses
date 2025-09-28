@@ -57,7 +57,8 @@ one_shot = true
 
 [node name="chrono_bruning" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_8yvbo")
-volume_db = -10.0
+volume_db = -25.0
 autoplay = true
+stream_paused = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
