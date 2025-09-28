@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4oojk4mqe1nm"]
+[gd_scene load_steps=10 format=3 uid="uid://b4oojk4mqe1nm"]
 
 [ext_resource type="Theme" uid="uid://bdppe4xcscq8r" path="res://Resources/MenuTheme.tres" id="1_5wsvm"]
 [ext_resource type="Script" uid="uid://ccb7k08bua3kc" path="res://Scripts/main_menu.gd" id="1_i2xx2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://kxkcm5cl8qt6" path="res://Assets/UI/Tuto/onboarding_to_move.png" id="3_o14dv"]
 [ext_resource type="Texture2D" uid="uid://cjxmxyuaogpt3" path="res://Assets/UI/Tuto/ui_onboarding_aiming.png" id="4_mrfpk"]
 [ext_resource type="Texture2D" uid="uid://by665b8kqx61r" path="res://Assets/UI/Tuto/ui_onboarding_shoot2.png" id="5_4pqbp"]
+[ext_resource type="PackedScene" uid="uid://bi3gek0bmbwxw" path="res://Scenes/music_intro.tscn" id="7_gih0s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i2xx2"]
 font = ExtResource("3_4pqbp")
@@ -125,6 +126,8 @@ texture = ExtResource("4_mrfpk")
 [node name="UiOnboardingShoot2" type="Sprite2D" parent="Tuto"]
 position = Vector2(1265, 434)
 texture = ExtResource("5_4pqbp")
+
+[node name="music_intro" parent="." instance=ExtResource("7_gih0s")]
 
 [connection signal="pressed" from="BoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="BoxContainer/Help" to="." method="_on_help_pressed"]
