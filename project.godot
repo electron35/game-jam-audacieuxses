@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GameJamAudacieuxses"
-run/main_scene="uid://rmv8sxhmdkni"
+run/main_scene="uid://b4oojk4mqe1nm"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
