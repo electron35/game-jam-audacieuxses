@@ -91,13 +91,11 @@ break_value = 1
 [node name="UglyCar" parent="ScoreElement" instance=ExtResource("5_iacmt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.913366, 0.48476237, 5.9908376)
 
+[node name="UglyCar2" parent="ScoreElement" instance=ExtResource("5_iacmt")]
+transform = Transform3D(0.031410728, 0, 0.99950653, 0, 1, 0, -0.99950653, 0, 0.031410728, -17.594292, 0.48476237, -8.102646)
+
 [node name="Bank" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
 transform = Transform3D(-1.5656488e-08, 0, -0.35817868, 0, 0.35817868, 0, 0.35817868, 0, -1.5656488e-08, -11.144104, 0.047219515, 15.978774)
-
-break_value = 1
-
-[node name="SoundManager" parent="." instance=ExtResource("11_76v2p")]
-
 
 [node name="Bank2" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
 transform = Transform3D(4.696946e-08, 0, 0.35817868, 0, 0.35817868, 0, -0.35817868, 0, 4.696946e-08, -19.551657, 0.047219515, 15.978774)
@@ -105,6 +103,10 @@ transform = Transform3D(4.696946e-08, 0, 0.35817868, 0, 0.35817868, 0, -0.358178
 [node name="Bank3" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
 transform = Transform3D(4.696946e-08, 0, 0.35817868, 0, 0.35817868, 0, -0.35817868, 0, 4.696946e-08, -19.551657, 0.047219515, 4.228757)
 
+[node name="Bank5" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
+transform = Transform3D(-0.35817868, 0, 3.131297e-08, 0, 0.35817868, 0, -3.131297e-08, 0, -0.35817868, -0.9699106, 0.047219515, 7.892274)
+
 [node name="Bank4" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
 transform = Transform3D(4.696946e-08, 0, 0.35817868, 0, 0.35817868, 0, -0.35817868, 0, 4.696946e-08, -19.551657, 0.047219515, -7.869361)
 
+[node name="SoundManager" parent="." instance=ExtResource("11_76v2p")]
