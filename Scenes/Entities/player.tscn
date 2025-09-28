@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=14 format=3 uid="uid://d4a3t8yuyh307"]
-
+[gd_scene load_steps=16 format=3 uid="uid://d4a3t8yuyh307"]
 
 [ext_resource type="Script" uid="uid://bqolw5iehqdig" path="res://Scripts/Player/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://0lrkciq870up" path="res://Scripts/Player/dialog.gd" id="2_6t5aa"]
@@ -149,7 +147,6 @@ debug_shape_custom_color = Color(1, 0, 0, 0.5058824)
 debug_shape_thickness = 5
 script = ExtResource("2_cvnsp")
 
-
 [node name="projectile_throw" type="AudioStreamPlayer" parent="Head/Camera3D/RayCast3D"]
 stream = ExtResource("8_2hnfo")
 volume_db = -10.0
@@ -159,7 +156,6 @@ stream = ExtResource("9_y18yp")
 volume_db = -20.0
 
 [connection signal="animation_finished" from="Head/Camera3D/UIControl/Wand" to="." method="_on_wand_animation_finished"]
-
 [connection signal="visibility_changed" from="Head/Camera3D/UIControl/DialogBox" to="." method="_on_dialog_box_visibility_changed"]
 [connection signal="pressed" from="Head/Camera3D/UIControl/DialogBox/Choice1" to="Head/Camera3D/UIControl/DialogBox" method="_on_choice_1_pressed"]
 [connection signal="pressed" from="Head/Camera3D/UIControl/DialogBox/Choice2" to="Head/Camera3D/UIControl/DialogBox" method="_on_choice_2_pressed"]

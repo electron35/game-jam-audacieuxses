@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1vn3vcjut82r"]
+[gd_scene load_steps=7 format=3 uid="uid://c1vn3vcjut82r"]
 
 [ext_resource type="Script" uid="uid://dp6lswccxnood" path="res://Scripts/Interactible/interactible.gd" id="1_to3qb"]
 [ext_resource type="Resource" uid="uid://dylf8umw6yte7" path="res://Resources/Interactible/Bank.tres" id="2_1i2jd"]
 [ext_resource type="Texture2D" uid="uid://bf5idr1o0xpix" path="res://Assets/Sprites/Bank_clear.png" id="2_to3qb"]
 [ext_resource type="PackedScene" uid="uid://c0280anxl81yx" path="res://Scenes/particle.tscn" id="4_x0i47"]
+[ext_resource type="AudioStream" uid="uid://87sa0pkuu20l" path="res://Resources/Sons/male_tears_filling_a.mp3" id="5_vh64i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i8kt7"]
 size = Vector3(33.003845, 20.854614, 1)
@@ -23,3 +24,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.293813, 0)
 texture = ExtResource("2_to3qb")
 
 [node name="Particle" parent="." instance=ExtResource("4_x0i47")]
+
+[node name="male_tears_filling" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_vh64i")
+volume_db = -10.0

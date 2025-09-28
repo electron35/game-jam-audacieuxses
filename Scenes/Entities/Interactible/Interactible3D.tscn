@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://btjfqjnlmos34"]
+[gd_scene load_steps=7 format=3 uid="uid://btjfqjnlmos34"]
 
 [ext_resource type="Script" uid="uid://pg1bf41h3lgr" path="res://Scripts/Interactible/interactible_3d.gd" id="1_dlh0l"]
 [ext_resource type="PackedScene" uid="uid://ce7xadtnpg7bf" path="res://Assets/Models/UglyCar.glb" id="1_xuw3d"]
 [ext_resource type="PackedScene" uid="uid://c0280anxl81yx" path="res://Scenes/particle.tscn" id="2_2unab"]
 [ext_resource type="PackedScene" uid="uid://bnmq1vsco8tny" path="res://Assets/Models/UglyCarBroken.glb" id="2_tn7gv"]
+[ext_resource type="AudioStream" uid="uid://87sa0pkuu20l" path="res://Resources/Sons/male_tears_filling_a.mp3" id="5_ksgk2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dlh0l"]
 size = Vector3(6.003353, 2.730957, 2.0876608)
@@ -24,3 +25,7 @@ shape = SubResource("BoxShape3D_dlh0l")
 [node name="BrokenState" parent="." instance=ExtResource("2_tn7gv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7274446, 0)
 visible = false
+
+[node name="male_tears_filling" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ksgk2")
+volume_db = -10.0

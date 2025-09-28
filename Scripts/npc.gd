@@ -12,6 +12,7 @@ var crying:bool
 @onready var look_at_me: Node3D = $CollisionShape3D/LookAtMe
 @onready var male_crying: AudioStreamPlayer = $male_crying
 @onready var male_laugh: AudioStreamPlayer = $male_laugh
+@onready var male_tears_filling: AudioStreamPlayer = $male_tears_filling
 
 func _ready() -> void:
 	var dialog = Global.GetRandomDialog()
@@ -36,6 +37,7 @@ func _on_interaction_area_body_entered(body: Node3D) -> void:
 func cry(isStrong:bool): #Fonction qui se déclenche lorsqu'on a répondu à l'interaction
 	var textData = data.strongResponse if isStrong else data.weakResponse
 	Global.Score += 1 + (1 if isStrong else 0)
+	male_tears_filling.play()
 	crying = true
 	sprite.texture=data.HurtedFace
 	speech.display_text = textData
