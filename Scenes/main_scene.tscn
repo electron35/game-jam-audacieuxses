@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://rmv8sxhmdkni"]
+[gd_scene load_steps=15 format=3 uid="uid://rmv8sxhmdkni"]
 
 [ext_resource type="PackedScene" uid="uid://d4a3t8yuyh307" path="res://Scenes/Entities/player.tscn" id="1_52fb6"]
 [ext_resource type="PackedScene" uid="uid://dxrip0m06ryj5" path="res://Scenes/Entities/Interactible/Interactible2D.tscn" id="2_6l7je"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ddmrroxf7bimu" path="res://Scenes/Models/city.tscn" id="8_huasi"]
 [ext_resource type="PackedScene" uid="uid://43h6o7r1wd4q" path="res://Scenes/Models/Tree.tscn" id="9_m1efj"]
 [ext_resource type="Resource" uid="uid://m1kgjott17n0" path="res://Resources/Interactible/Flag.tres" id="10_mai8y"]
+[ext_resource type="PackedScene" uid="uid://dayqofvfjslr8" path="res://Scenes/music_game.tscn" id="11_76v2p"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_52fb6"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -93,6 +94,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.913366, 0.48476237, 5.9908
 [node name="Bank" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
 transform = Transform3D(-1.5656488e-08, 0, -0.35817868, 0, 0.35817868, 0, 0.35817868, 0, -1.5656488e-08, -11.144104, 0.047219515, 15.978774)
 
+break_value = 1
+
+[node name="SoundManager" parent="." instance=ExtResource("11_76v2p")]
+
+
 [node name="Bank2" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
 transform = Transform3D(4.696946e-08, 0, 0.35817868, 0, 0.35817868, 0, -0.35817868, 0, 4.696946e-08, -19.551657, 0.047219515, 15.978774)
 
@@ -101,3 +107,4 @@ transform = Transform3D(4.696946e-08, 0, 0.35817868, 0, 0.35817868, 0, -0.358178
 
 [node name="Bank4" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
 transform = Transform3D(4.696946e-08, 0, 0.35817868, 0, 0.35817868, 0, -0.35817868, 0, 4.696946e-08, -19.551657, 0.047219515, -7.869361)
+

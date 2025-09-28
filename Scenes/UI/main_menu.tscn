@@ -1,15 +1,20 @@
+
 [gd_scene load_steps=20 format=3 uid="uid://b4oojk4mqe1nm"]
+
 
 [ext_resource type="Theme" uid="uid://bdppe4xcscq8r" path="res://Resources/MenuTheme.tres" id="1_5wsvm"]
 [ext_resource type="Script" uid="uid://ccb7k08bua3kc" path="res://Scripts/main_menu.gd" id="1_i2xx2"]
+[ext_resource type="FontFile" uid="uid://d3jj1nk6fyecn" path="res://Scenes/UI/Jua-Regular.ttf" id="3_4pqbp"]
 [ext_resource type="Texture2D" uid="uid://kxkcm5cl8qt6" path="res://Assets/UI/Tuto/onboarding_to_move.png" id="3_o14dv"]
 [ext_resource type="Texture2D" uid="uid://cjxmxyuaogpt3" path="res://Assets/UI/Tuto/ui_onboarding_aiming.png" id="4_mrfpk"]
 [ext_resource type="Texture2D" uid="uid://by665b8kqx61r" path="res://Assets/UI/Tuto/ui_onboarding_shoot2.png" id="5_4pqbp"]
+
+[ext_resource type="PackedScene" uid="uid://bi3gek0bmbwxw" path="res://Scenes/music_intro.tscn" id="7_gih0s"]
 [ext_resource type="Texture2D" uid="uid://dlqj72lm81mim" path="res://Assets/UI/narration_clean1.png" id="6_gih0s"]
 [ext_resource type="Texture2D" uid="uid://dxirpfaqeqs8w" path="res://Assets/UI/narration_clean2.png" id="7_k33u3"]
-
 [sub_resource type="LabelSettings" id="LabelSettings_i2xx2"]
-font_size = 136
+font = ExtResource("3_4pqbp")
+font_size = 176
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7lva"]
 bg_color = Color(0.43904907, 0.43904915, 0.43904895, 1)
@@ -144,6 +149,8 @@ theme_override_constants/separation = 74
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_5wsvm")
+theme_override_fonts/font = ExtResource("3_4pqbp")
+theme_override_font_sizes/font_size = 50
 text = "Jouer"
 autowrap_mode = 2
 icon_alignment = 1
@@ -152,6 +159,8 @@ icon_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_5wsvm")
+theme_override_fonts/font = ExtResource("3_4pqbp")
+theme_override_font_sizes/font_size = 50
 text = "Tutoriel"
 autowrap_mode = 2
 icon_alignment = 1
@@ -160,6 +169,8 @@ icon_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_5wsvm")
+theme_override_fonts/font = ExtResource("3_4pqbp")
+theme_override_font_sizes/font_size = 50
 text = "Quitter"
 autowrap_mode = 2
 icon_alignment = 1
@@ -170,6 +181,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 9.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u7lva")
@@ -201,6 +216,9 @@ texture = ExtResource("4_mrfpk")
 [node name="UiOnboardingShoot2" type="Sprite2D" parent="Tuto"]
 position = Vector2(1265, 434)
 texture = ExtResource("5_4pqbp")
+
+
+[node name="music_intro" parent="." instance=ExtResource("7_gih0s")]
 
 [node name="Intro" type="Control" parent="."]
 visible = false
@@ -248,6 +266,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_wqme5")
 libraries = {
 &"": SubResource("AnimationLibrary_k33u3")
 }
+
 
 [connection signal="pressed" from="BoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="BoxContainer/Help" to="." method="_on_help_pressed"]
