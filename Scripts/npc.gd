@@ -11,6 +11,7 @@ var crying:bool
 @onready var interaction_area: Area3D = $InteractionArea
 @onready var look_at_me: Node3D = $CollisionShape3D/LookAtMe
 @onready var male_crying: AudioStreamPlayer = $male_crying
+@onready var male_laugh: AudioStreamPlayer = $male_laugh
 
 func _ready() -> void:
 	var dialog = Global.GetRandomDialog()
@@ -29,6 +30,7 @@ func _on_interaction_area_body_entered(body: Node3D) -> void:
 	print(body.name)
 	if body is CharacterBody3D:
 		body.open_dialog(self)
+		male_laugh.play()
 		
 func cry(isStrong:bool): #Fonction qui se déclenche lorsqu'on a répondu à l'interaction
 	var textData = data.strongResponse if isStrong else data.weakResponse
