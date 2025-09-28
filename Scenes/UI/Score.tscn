@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cx3wxgqf8c684"]
+[gd_scene load_steps=7 format=3 uid="uid://cx3wxgqf8c684"]
 
 [ext_resource type="Script" uid="uid://ddg2eqesus4bn" path="res://Scripts/score.gd" id="1_yub21"]
+[ext_resource type="Texture2D" uid="uid://bd160vy2n16pg" path="res://Assets/UI/Option_GoodEnd_3.png" id="2_3fuo5"]
 [ext_resource type="Theme" uid="uid://bdppe4xcscq8r" path="res://Resources/MenuTheme.tres" id="2_mtq4d"]
+[ext_resource type="Texture2D" uid="uid://bh5im17fqlyfy" path="res://Assets/UI/ui_winning.png" id="3_atwjb"]
+[ext_resource type="Texture2D" uid="uid://d1h5ti8dumed5" path="res://Assets/UI/ui_game_over.png" id="4_3fuo5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fuo5"]
+bg_color = Color(0.31431612, 0.31431612, 0.31431603, 0.8392157)
 
 [node name="Score" type="Control"]
 layout_mode = 3
@@ -12,16 +18,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yub21")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 206
-text = "INCROYABLE"
-autowrap_mode = 3
+[node name="OptionGoodEnd3" type="Sprite2D" parent="."]
+position = Vector2(977.2597, 610)
+scale = Vector2(0.5532258, 0.5532258)
+texture = ExtResource("2_3fuo5")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -40,5 +40,32 @@ theme = ExtResource("2_mtq4d")
 text = "Menu"
 text_overrun_behavior = 1
 autowrap_mode = 3
+
+[node name="UiWinning" type="Sprite2D" parent="."]
+position = Vector2(456, 166)
+scale = Vector2(0.9002134, 0.76963353)
+texture = ExtResource("3_atwjb")
+
+[node name="UiGameOver" type="Sprite2D" parent="."]
+position = Vector2(1026, 354)
+texture = ExtResource("4_3fuo5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.776
+anchor_right = 0.652
+anchor_bottom = 1.0480001
+offset_left = -16.080017
+offset_top = 101.91998
+offset_right = -1.8399658
+offset_bottom = -53.840088
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_3fuo5")
+text = "sdsdss sdqsdqsd qsd qs dqsd qsd qs  dqsdqsdqsd"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

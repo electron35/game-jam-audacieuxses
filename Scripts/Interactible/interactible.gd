@@ -3,12 +3,15 @@ extends StaticBody3D
 class_name Interactible
 
 @export var data:InteractibleData
-@export var break_value:int
+@export var break_value:int = 1
 
 @onready var sprite: Sprite3D = $Sprite3D
 @onready var particle: GPUParticles3D = $Particle
 
 var broken:bool
+
+func _ready() -> void:
+	Global.MaxScore+=break_value
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h30w62pj5rtb"
-path="res://.godot/imported/right_arm_throw_rough4.png-151901d599606832d9ca5e5235a42230.ctex"
+uid="uid://bd160vy2n16pg"
+path="res://.godot/imported/Option_GoodEnd_3.png-9473905e73abe99de5c38d9e4a65ae13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/Wand/right_arm_throw_rough4.png"
-dest_files=["res://.godot/imported/right_arm_throw_rough4.png-151901d599606832d9ca5e5235a42230.ctex"]
+source_file="res://Assets/UI/Option_GoodEnd_3.png"
+dest_files=["res://.godot/imported/Option_GoodEnd_3.png-9473905e73abe99de5c38d9e4a65ae13.ctex"]
 
 [params]
 

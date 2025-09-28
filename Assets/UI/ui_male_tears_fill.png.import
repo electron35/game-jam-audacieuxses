@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4vids5qaqeb2"
-path="res://.godot/imported/witch_right_arm_throw7.png-e956db8719fdcc90ebe881d4bb9679b5.ctex"
+uid="uid://d1ron4cpjak47"
+path="res://.godot/imported/ui_male_tears_fill.png-56160447e0226880a23fa26fcd9f8a85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/Wand/witch_right_arm_throw7.png"
-dest_files=["res://.godot/imported/witch_right_arm_throw7.png-e956db8719fdcc90ebe881d4bb9679b5.ctex"]
+source_file="res://Assets/UI/ui_male_tears_fill.png"
+dest_files=["res://.godot/imported/ui_male_tears_fill.png-56160447e0226880a23fa26fcd9f8a85.ctex"]
 
 [params]
 

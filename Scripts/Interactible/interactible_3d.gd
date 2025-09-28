@@ -2,7 +2,7 @@ extends StaticBody3D
 
 var broken=false
 
-@export var break_value:int
+@export var break_value:int = 1
 
 @onready var particle: GPUParticles3D = $Particle
 @onready var clean_state: Node3D = $CleanState
@@ -11,6 +11,7 @@ var broken=false
 func _ready() -> void:
 		clean_state.visible=true
 		broken_state.visible=false
+		Global.MaxScore+=break_value
 
 func spell():
 	if (!broken):

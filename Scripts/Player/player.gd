@@ -8,6 +8,8 @@ const SENSITIVITY = 0.003
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var raycast: RayCast3D = $Head/Camera3D/RayCast3D
 @onready var dialog: Control = $Head/Camera3D/UIControl/DialogBox
+@onready var wand: AnimatedSprite2D = $Head/Camera3D/UIControl/Wand
+
 
 func _ready()  -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -50,3 +52,7 @@ func _on_dialog_box_visibility_changed() -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+
+func _on_wand_animation_finished() -> void:
+	wand.play("Idle")

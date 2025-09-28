@@ -21,6 +21,7 @@ func _ready() -> void:
 	
 	speech.visible = false
 	sprite.texture=data.UnarmedFace
+	Global.MaxScore += 2
 
 func _process(delta) -> void:
 	if !crying:
