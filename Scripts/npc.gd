@@ -10,6 +10,7 @@ var crying:bool
 @onready var speech: Sprite3D = $Sprite3D/Speech
 @onready var interaction_area: Area3D = $InteractionArea
 @onready var look_at_me: Node3D = $CollisionShape3D/LookAtMe
+@onready var male_crying: AudioStreamPlayer = $male_crying
 
 func _ready() -> void:
 	var dialog = Global.GetRandomDialog()
@@ -37,3 +38,4 @@ func cry(isStrong:bool): #Fonction qui se déclenche lorsqu'on a répondu à l'i
 	speech.display_text = textData
 	speech.visible = true
 	interaction_area.monitoring = false
+	male_crying.play()
