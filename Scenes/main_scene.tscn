@@ -36,10 +36,40 @@ environment = SubResource("Environment_jv6wh")
 [node name="Player" parent="." instance=ExtResource("1_52fb6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.691556, 0.29624242, 17.252987)
 
-[node name="City" parent="." instance=ExtResource("8_huasi")]
+[node name="Environment" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.390356, 0, 3.797699)
 
+[node name="City" parent="Environment" instance=ExtResource("8_huasi")]
+
+[node name="tree" parent="Environment" instance=ExtResource("9_m1efj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.433216, 0.100001335, -6.359187)
+
+[node name="tree2" parent="Environment" instance=ExtResource("9_m1efj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0791817, 0.10000038, -17.373909)
+
+[node name="tree3" parent="Environment" instance=ExtResource("9_m1efj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.414326, 0.10000038, -6.045939)
+
+[node name="tree4" parent="Environment" instance=ExtResource("9_m1efj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.662844, 0.10000038, -16.681759)
+
+[node name="tree5" parent="Environment" instance=ExtResource("9_m1efj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.778439, 0.09999943, -8.376005)
+
+[node name="tree6" parent="Environment" instance=ExtResource("9_m1efj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.759645, 0.10000038, -14.362712)
+
+[node name="tree7" parent="Environment" instance=ExtResource("9_m1efj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.786959, 0.10000038, -15.194485)
+
+[node name="tree8" parent="Environment" instance=ExtResource("9_m1efj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.058791, 0.10000038, -11.997354)
+
 [node name="ScoreElement" type="Node3D" parent="."]
+
+[node name="Flag" parent="ScoreElement" instance=ExtResource("2_6l7je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.858776, 1.5273046, -12.88757)
+data = ExtResource("10_mai8y")
 
 [node name="BebertArnaque" parent="ScoreElement" instance=ExtResource("3_jv6wh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3379211, 0.009523153, -5.2556047)
@@ -61,34 +91,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.913366, 0.48476237, 5.9908
 break_value = 1
 
 [node name="InteractibleFacade" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
-transform = Transform3D(-1.5656488e-08, 0, -0.35817868, 0, 0.35817868, 0, 0.35817868, 0, -1.5656488e-08, -11.144104, 0.047219515, 15.209443)
+transform = Transform3D(-1.5656488e-08, 0, -0.35817868, 0, 0.35817868, 0, 0.35817868, 0, -1.5656488e-08, -11.144104, 0.047219515, 15.978774)
 break_value = 1
-
-[node name="tree" parent="." instance=ExtResource("9_m1efj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.95714, 0.100001335, -2.5614882)
-
-[node name="tree2" parent="." instance=ExtResource("9_m1efj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.311174, 0.10000038, -13.57621)
-
-[node name="tree3" parent="." instance=ExtResource("9_m1efj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02397, 0.10000038, -2.24824)
-
-[node name="tree4" parent="." instance=ExtResource("9_m1efj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.272488, 0.10000038, -12.88406)
-
-[node name="tree5" parent="." instance=ExtResource("9_m1efj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3880825, 0.09999943, -4.578306)
-
-[node name="tree6" parent="." instance=ExtResource("9_m1efj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3692894, 0.10000038, -10.565013)
-
-[node name="tree7" parent="." instance=ExtResource("9_m1efj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6033974, 0.10000038, -11.396786)
-
-[node name="tree8" parent="." instance=ExtResource("9_m1efj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.331565, 0.10000038, -8.199655)
-
-[node name="Interactible" parent="." instance=ExtResource("2_6l7je")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.858776, 1.5273046, -12.88757)
-data = ExtResource("10_mai8y")
-break_value = 0
