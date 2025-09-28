@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://kub2doyo41y3"]
+[gd_scene load_steps=10 format=3 uid="uid://kub2doyo41y3"]
 
 [ext_resource type="Texture2D" uid="uid://dibdye3yony32" path="res://Assets/UI/Timer/chrono.png" id="1_fgi8r"]
 [ext_resource type="Script" uid="uid://de83menu2bl5g" path="res://Scripts/timer_clock.gd" id="1_yiyjv"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ds2crjkgtg8pm" path="res://Assets/UI/Timer/chrono_burning_2.png" id="4_8yvbo"]
 [ext_resource type="Texture2D" uid="uid://bu48mcr06tnrk" path="res://Assets/UI/Timer/chrono_burning_3.png" id="5_gxpnl"]
 [ext_resource type="Texture2D" uid="uid://6r4l5q8wc8lu" path="res://Assets/UI/Timer/chrono_burning_4.png" id="6_i8m3h"]
+[ext_resource type="AudioStream" uid="uid://cs50l14kyu4ul" path="res://Resources/Sons/chrono_burning.mp3" id="8_8yvbo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hiagx"]
 animations = [{
@@ -53,5 +54,10 @@ frame_progress = 0.3276322
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0
 one_shot = true
+
+[node name="chrono_bruning" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_8yvbo")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
