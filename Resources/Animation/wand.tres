@@ -1,9 +1,12 @@
-[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://bxtbhsvady6ta"]
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://bxtbhsvady6ta"]
 
 [ext_resource type="Texture2D" uid="uid://dab0575b265mn" path="res://Assets/UI/Wand/witch_right_arm_throw1.png" id="1_mmv4i"]
 [ext_resource type="Texture2D" uid="uid://ckcnkolt8v7mm" path="res://Assets/UI/Wand/witch_right_arm_throw2.png" id="2_1kp0b"]
 [ext_resource type="Texture2D" uid="uid://egv76ku1dro3" path="res://Assets/UI/Wand/witch_right_arm_throw3.png" id="3_ul5x6"]
 [ext_resource type="Texture2D" uid="uid://b6pqihdb2i5ei" path="res://Assets/UI/Wand/witch_right_arm_throw4.png" id="4_al3dc"]
+[ext_resource type="Texture2D" uid="uid://dvuwt22016nn2" path="res://Assets/UI/Wand/witch_right_arm_throw5.png" id="5_al3dc"]
+[ext_resource type="Texture2D" uid="uid://bunenaymt41s1" path="res://Assets/UI/Wand/witch_right_arm_throw6.png" id="6_fqnhd"]
+[ext_resource type="Texture2D" uid="uid://4vids5qaqeb2" path="res://Assets/UI/Wand/witch_right_arm_throw7.png" id="7_rcf85"]
 
 [resource]
 animations = [{
@@ -21,9 +24,18 @@ animations = [{
 "texture": ExtResource("4_al3dc")
 }, {
 "duration": 1.0,
+"texture": ExtResource("5_al3dc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fqnhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rcf85")
+}, {
+"duration": 1.0,
 "texture": ExtResource("1_mmv4i")
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 15.0
 }]

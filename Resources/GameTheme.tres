@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dcgcd5sggj3c"]
+
+[ext_resource type="Texture2D" uid="uid://caplbh87s3mqy" path="res://Assets/UI/ui_pop_up_reply.png" id="1_jg0xn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8y34u"]
+texture = ExtResource("1_jg0xn")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 25.0
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 56
+Button/styles/normal = SubResource("StyleBoxTexture_8y34u")

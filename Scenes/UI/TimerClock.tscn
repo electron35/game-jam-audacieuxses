@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://kub2doyo41y3"]
 
-[ext_resource type="Texture2D" uid="uid://dibdye3yony32" path="res://Assets/UI/chrono.png" id="1_fgi8r"]
+[ext_resource type="Texture2D" uid="uid://dibdye3yony32" path="res://Assets/UI/Timer/chrono.png" id="1_fgi8r"]
 [ext_resource type="Script" uid="uid://de83menu2bl5g" path="res://Scripts/timer_clock.gd" id="1_yiyjv"]
-[ext_resource type="Texture2D" uid="uid://c8waiofo1fnx0" path="res://Assets/UI/chrono_arrow.png" id="2_vegd7"]
-[ext_resource type="Texture2D" uid="uid://dl4cp2ttj2m6k" path="res://Assets/UI/chrono_burning_1.png" id="3_yiyjv"]
-[ext_resource type="Texture2D" uid="uid://ds2crjkgtg8pm" path="res://Assets/UI/chrono_burning_2.png" id="4_8yvbo"]
-[ext_resource type="Texture2D" uid="uid://bu48mcr06tnrk" path="res://Assets/UI/chrono_burning_3.png" id="5_gxpnl"]
-[ext_resource type="Texture2D" uid="uid://6r4l5q8wc8lu" path="res://Assets/UI/chrono_burning_4.png" id="6_i8m3h"]
+[ext_resource type="Texture2D" uid="uid://c8waiofo1fnx0" path="res://Assets/UI/Timer/chrono_arrow.png" id="2_vegd7"]
+[ext_resource type="Texture2D" uid="uid://dl4cp2ttj2m6k" path="res://Assets/UI/Timer/chrono_burning_1.png" id="3_yiyjv"]
+[ext_resource type="Texture2D" uid="uid://ds2crjkgtg8pm" path="res://Assets/UI/Timer/chrono_burning_2.png" id="4_8yvbo"]
+[ext_resource type="Texture2D" uid="uid://bu48mcr06tnrk" path="res://Assets/UI/Timer/chrono_burning_3.png" id="5_gxpnl"]
+[ext_resource type="Texture2D" uid="uid://6r4l5q8wc8lu" path="res://Assets/UI/Timer/chrono_burning_4.png" id="6_i8m3h"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hiagx"]
 animations = [{

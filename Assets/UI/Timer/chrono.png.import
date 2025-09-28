@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu48mcr06tnrk"
-path="res://.godot/imported/chrono_burning_3.png-7ecd4b0d157ab043cb6202bc0baaffb8.ctex"
+uid="uid://dibdye3yony32"
+path="res://.godot/imported/chrono.png-328e5bca6ad073dc807db79ff5c4f4f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/chrono_burning_3.png"
-dest_files=["res://.godot/imported/chrono_burning_3.png-7ecd4b0d157ab043cb6202bc0baaffb8.ctex"]
+source_file="res://Assets/UI/Timer/chrono.png"
+dest_files=["res://.godot/imported/chrono.png-328e5bca6ad073dc807db79ff5c4f4f4.ctex"]
 
 [params]
 

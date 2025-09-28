@@ -31,10 +31,9 @@ billboard = 2
 texture = ExtResource("3_4a2w1")
 
 [node name="Speech" parent="Sprite3D" instance=ExtResource("4_7fgga")]
-transform = Transform3D(6.821, 0, 0, 0, 6.821, 0, 0, 0, 2.507, 0, 14.414539, 0)
+transform = Transform3D(6.976, 0, 0, 0, 6.976, 0, 0, 0, 2.564, 0.1016174, 14.539932, -0.0711986)
 centered = false
 texture = SubResource("ViewportTexture_7fgga")
-display_text = "default"
 
 [node name="InteractionArea" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.079273, 0)

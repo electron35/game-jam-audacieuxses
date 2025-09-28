@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8waiofo1fnx0"
-path="res://.godot/imported/chrono_arrow.png-6b23a544dc58f848f34010020b1bf651.ctex"
+uid="uid://cjxmxyuaogpt3"
+path="res://.godot/imported/ui_onboarding_aiming.png-f04603a0c4728634245fe8a4beb87c42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/chrono_arrow.png"
-dest_files=["res://.godot/imported/chrono_arrow.png-6b23a544dc58f848f34010020b1bf651.ctex"]
+source_file="res://Assets/UI/Tuto/ui_onboarding_aiming.png"
+dest_files=["res://.godot/imported/ui_onboarding_aiming.png-f04603a0c4728634245fe8a4beb87c42.ctex"]
 
 [params]
 

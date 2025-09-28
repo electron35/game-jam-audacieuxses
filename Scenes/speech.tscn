@@ -1,32 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8idyvf8u7ym"]
+[gd_scene load_steps=5 format=3 uid="uid://b8idyvf8u7ym"]
 
 [ext_resource type="Script" uid="uid://mwg0igpcima2" path="res://Scripts/speech.gd" id="1_lgsjf"]
-[ext_resource type="Texture2D" uid="uid://bd0tccbh8vy6r" path="res://Assets/9rect.png" id="3_sl7u7"]
+[ext_resource type="Texture2D" uid="uid://drs74xil7mvme" path="res://Assets/UI/ui_pop_up_answer.png" id="2_lgsjf"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_snneb"]
 viewport_path = NodePath("SubViewport")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lgsjf"]
+texture = ExtResource("2_lgsjf")
+texture_margin_right = 48.0
+texture_margin_bottom = 36.0
+
 [node name="Speech" type="Sprite3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1.946, 0, 0, 0, 1, 0, 0, 0, 1.946, 0, 0, 0)
 billboard = 2
 texture = SubResource("ViewportTexture_snneb")
 script = ExtResource("1_lgsjf")
-display_text = null
+display_text = "BONJOUR CECI EST UN LONG TEXTE POUR FAIRE DES TESTS"
 
 [node name="SubViewport" type="SubViewport" parent="."]
-size = Vector2i(211, 75)
+transparent_bg = true
+size = Vector2i(512, 250)
 
-[node name="Box" type="NinePatchRect" parent="SubViewport"]
-offset_right = 211.0
-offset_bottom = 75.0
-texture = ExtResource("3_sl7u7")
-region_rect = Rect2(1, 1, 1, 1)
-
-[node name="Label" type="Label" parent="SubViewport/Box"]
-layout_mode = 0
-offset_right = 211.0
-offset_bottom = 75.0
-text = "OUI MAIS EUHHH VOILA QUOI MOI JE SUIS UN HONNETE MILLIARDAIRE"
+[node name="Label" type="Label" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 83.0
+offset_top = 35.0
+offset_right = -37.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_lgsjf")
+text = "BONJOUR CECI EST UN LONG TEXTE POUR FAIRE DES TESTS"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
