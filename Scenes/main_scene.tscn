@@ -90,5 +90,14 @@ break_value = 1
 [node name="UglyCar" parent="ScoreElement" instance=ExtResource("5_iacmt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.913366, 0.48476237, 5.9908376)
 
-[node name="InteractibleFacade" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
+[node name="Bank" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
 transform = Transform3D(-1.5656488e-08, 0, -0.35817868, 0, 0.35817868, 0, 0.35817868, 0, -1.5656488e-08, -11.144104, 0.047219515, 15.978774)
+
+[node name="Bank2" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
+transform = Transform3D(4.696946e-08, 0, 0.35817868, 0, 0.35817868, 0, -0.35817868, 0, 4.696946e-08, -19.551657, 0.047219515, 15.978774)
+
+[node name="Bank3" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
+transform = Transform3D(4.696946e-08, 0, 0.35817868, 0, 0.35817868, 0, -0.35817868, 0, 4.696946e-08, -19.551657, 0.047219515, 4.228757)
+
+[node name="Bank4" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
+transform = Transform3D(4.696946e-08, 0, 0.35817868, 0, 0.35817868, 0, -0.35817868, 0, 4.696946e-08, -19.551657, 0.047219515, -7.869361)
