@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://dqwne1somkbnj"
+uid="uid://dbwcjyd8gsn7i"
 path="res://.godot/imported/chrono_ticking.mp3-8d3cd9ea51ac421cdc26c983a9939cf1.mp3str"
 
 [deps]
@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/chrono_ticking.mp3-8d3cd9ea51ac421cdc26c983a9
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
