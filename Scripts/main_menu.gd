@@ -36,6 +36,7 @@ func _on_intro_button_pressed() -> void:
 	if intro_click == 0:
 		intro_click+=1
 		animation_player.play("FirstFadeOut")
+		narration_clean_1.visible = false
 		animation_player.play("SecondFadeIn")
 		narration_clean_2.visible = true
 	else:
