@@ -7,6 +7,7 @@ class_name Interactible
 
 @onready var sprite: Sprite3D = $Sprite3D
 @onready var particle: GPUParticles3D = $Particle
+@onready var male_tears_filling: AudioStreamPlayer = $male_tears_filling
 
 var broken:bool
 
@@ -26,3 +27,5 @@ func spell():
 		broken=true
 		particle.emitting=true
 		Global.Score+=break_value
+		male_tears_filling.play()
+		

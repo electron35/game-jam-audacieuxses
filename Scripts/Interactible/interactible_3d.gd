@@ -7,6 +7,7 @@ var broken=false
 @onready var particle: GPUParticles3D = $Particle
 @onready var clean_state: Node3D = $CleanState
 @onready var broken_state: Node3D = $BrokenState
+@onready var male_tears_filling: AudioStreamPlayer = $male_tears_filling
 
 func _ready() -> void:
 		clean_state.visible=true
@@ -20,3 +21,5 @@ func spell():
 		clean_state.visible=false
 		broken_state.visible=true
 		Global.Score+=break_value
+		male_tears_filling.play()
+	

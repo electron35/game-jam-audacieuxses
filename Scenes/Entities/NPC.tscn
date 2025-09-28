@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cic1yiqgeesod"]
+[gd_scene load_steps=11 format=3 uid="uid://cic1yiqgeesod"]
 
 [ext_resource type="Script" uid="uid://dv132uidklika" path="res://Scripts/npc.gd" id="1_fo5tq"]
 [ext_resource type="Resource" uid="uid://dnshr6f4nrqjl" path="res://Resources/NPC/LeonMuffle.tres" id="2_xs5w8"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b8idyvf8u7ym" path="res://Scenes/speech.tscn" id="4_7fgga"]
 [ext_resource type="AudioStream" uid="uid://cvtvc0wcwvlai" path="res://Resources/Sons/male_laugh.mp3" id="5_wjlaq"]
 [ext_resource type="AudioStream" uid="uid://t0l3wy1ht8uq" path="res://Resources/Sons/male_crying.mp3" id="5_yb3dg"]
+[ext_resource type="AudioStream" uid="uid://87sa0pkuu20l" path="res://Resources/Sons/male_tears_filling_a.mp3" id="7_bloew"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tdvfm"]
 radius = 0.125
@@ -52,5 +53,9 @@ volume_db = -5.0
 [node name="male_laugh" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_wjlaq")
 volume_db = -5.0
+
+[node name="male_tears_filling" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_bloew")
+volume_db = -10.0
 
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
