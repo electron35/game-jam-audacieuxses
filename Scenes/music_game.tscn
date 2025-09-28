@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://dayqofvfjslr8"]
+[gd_scene load_steps=4 format=3 uid="uid://dayqofvfjslr8"]
 
 [ext_resource type="AudioStream" uid="uid://cvfb5cfahw6d6" path="res://Resources/Musiques/music_game.wav" id="1_32i44"]
+[ext_resource type="Script" uid="uid://c6mm0fr3q2n7" path="res://Scenes/music_game.gd" id="1_555f2"]
+[ext_resource type="AudioStream" uid="uid://bcx5semmn46ws" path="res://Resources/Musiques/music_game_fast.wav" id="2_g0518"]
 
 [node name="SoundManager" type="Node"]
+script = ExtResource("1_555f2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_32i44")
 volume_db = -20.0
 autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_g0518")
+volume_db = -20.0

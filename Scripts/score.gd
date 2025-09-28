@@ -12,7 +12,7 @@ func _ready() -> void:
 	var percent:float = curScore/maxScore*100 
 	var text = "Vous avez remplis " + str(int(percent)) + "% de la fiole"
 	label.text = text
-	if percent < 30:
+	if percent < 15:
 		ui_winning.visible = false
 		option_good_end_3.visible = false
 		ui_game_over.visible = true

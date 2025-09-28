@@ -8,12 +8,15 @@ const DIALOG_LIST:DialogList = preload("uid://d0xy1i31wmho0")
 var Score:int = 0
 var MaxScore:int = 0
 
+var Hurry:bool = false
+
 func GetRandomDialog(): #Get a random dialog in the Dialog_list resources
 	return DIALOG_LIST.list[randi_range(0,DIALOG_LIST.list.size()-1)]
 
 func StartGame()->void:
 	Score = 0
 	MaxScore = 0
+	Hurry = false
 	get_tree().change_scene_to_packed(MAIN_SCENE)
 
 func EndGame()->void:
@@ -22,3 +25,4 @@ func EndGame()->void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_tree().reload_current_scene()
 	get_tree().change_scene_to_packed(SCORE)
+	

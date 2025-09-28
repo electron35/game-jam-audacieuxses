@@ -17,6 +17,8 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	chrono_arrow.rotate(deg_to_rad(360/wait_time)*delta)
+	if (timer.time_left <= wait_time/2):
+		Global.Hurry = true
 
 func _on_timer_timeout() -> void:
 	Global.EndGame()
