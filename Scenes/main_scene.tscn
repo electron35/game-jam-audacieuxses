@@ -69,7 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.058791, 0.10000038, -11.99
 [node name="ScoreElement" type="Node3D" parent="."]
 
 [node name="Flag" parent="ScoreElement" instance=ExtResource("2_6l7je")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.858776, 1.5273046, -12.88757)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.858776, 1.5273046, -3.16539)
 data = ExtResource("10_mai8y")
 break_value = 1
 
@@ -92,7 +92,10 @@ break_value = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.913366, 0.48476237, 5.9908376)
 
 [node name="UglyCar2" parent="ScoreElement" instance=ExtResource("5_iacmt")]
-transform = Transform3D(0.031410728, 0, 0.99950653, 0, 1, 0, -0.99950653, 0, 0.031410728, -17.594292, 0.48476237, -8.102646)
+transform = Transform3D(0.99950653, 0, -0.031410772, 0, 1, 0, 0.031410772, 0, 0.99950653, -15.648554, 0.48476237, -12.962594)
+
+[node name="UglyCar3" parent="ScoreElement" instance=ExtResource("5_iacmt")]
+transform = Transform3D(0.03141073, 0, 0.99950665, 0, 1, 0, -0.99950665, 0, 0.03141073, 8.800026, 0.48476428, 3.5917616)
 
 [node name="Bank" parent="ScoreElement" instance=ExtResource("6_6ev3c")]
 transform = Transform3D(-1.5656488e-08, 0, -0.35817868, 0, 0.35817868, 0, 0.35817868, 0, -1.5656488e-08, -11.144104, 0.047219515, 15.978774)

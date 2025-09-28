@@ -1,20 +1,22 @@
-
-[gd_scene load_steps=20 format=3 uid="uid://b4oojk4mqe1nm"]
-
+[gd_scene load_steps=24 format=3 uid="uid://b4oojk4mqe1nm"]
 
 [ext_resource type="Theme" uid="uid://bdppe4xcscq8r" path="res://Resources/MenuTheme.tres" id="1_5wsvm"]
 [ext_resource type="Script" uid="uid://ccb7k08bua3kc" path="res://Scripts/main_menu.gd" id="1_i2xx2"]
+[ext_resource type="Texture2D" uid="uid://dhb3t50voyoex" path="res://Assets/UI/Menu.png" id="2_wqme5"]
 [ext_resource type="FontFile" uid="uid://d3jj1nk6fyecn" path="res://Scenes/UI/Jua-Regular.ttf" id="3_4pqbp"]
 [ext_resource type="Texture2D" uid="uid://kxkcm5cl8qt6" path="res://Assets/UI/Tuto/onboarding_to_move.png" id="3_o14dv"]
 [ext_resource type="Texture2D" uid="uid://cjxmxyuaogpt3" path="res://Assets/UI/Tuto/ui_onboarding_aiming.png" id="4_mrfpk"]
 [ext_resource type="Texture2D" uid="uid://by665b8kqx61r" path="res://Assets/UI/Tuto/ui_onboarding_shoot2.png" id="5_4pqbp"]
-
-[ext_resource type="PackedScene" uid="uid://bi3gek0bmbwxw" path="res://Scenes/music_intro.tscn" id="7_gih0s"]
 [ext_resource type="Texture2D" uid="uid://dlqj72lm81mim" path="res://Assets/UI/narration_clean1.png" id="6_gih0s"]
+[ext_resource type="PackedScene" uid="uid://bi3gek0bmbwxw" path="res://Scenes/music_intro.tscn" id="7_gih0s"]
 [ext_resource type="Texture2D" uid="uid://dxirpfaqeqs8w" path="res://Assets/UI/narration_clean2.png" id="7_k33u3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jewm6"]
+bg_color = Color(0.50356716, 0.34432733, 0.5326298, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_i2xx2"]
 font = ExtResource("3_4pqbp")
-font_size = 176
+font_size = 181
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7lva"]
 bg_color = Color(0.43904907, 0.43904915, 0.43904895, 1)
@@ -44,6 +46,21 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_lrjdf"]
+resource_name = "FirstFadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NarrationClean1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_k33u3"]
 length = 0.001
 tracks/0/type = "value"
@@ -69,21 +86,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_lrjdf"]
-resource_name = "FirstFadeOut"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("NarrationClean1:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_wqme5"]
@@ -118,12 +120,26 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i2xx2")
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jewm6")
+
+[node name="Menu" type="Sprite2D" parent="."]
+position = Vector2(1500, 532.00006)
+scale = Vector2(0.45828012, 0.4483883)
+texture = ExtResource("2_wqme5")
+
 [node name="RichTextLabel" type="Label" parent="."]
 layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 301.0
+offset_right = 1086.0
+offset_bottom = 428.0
 theme = ExtResource("1_5wsvm")
-text = "Y'a que la vérité qui blesse"
+text = "Cry Harder!"
 label_settings = SubResource("LabelSettings_i2xx2")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -131,14 +147,14 @@ autowrap_mode = 2
 
 [node name="BoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = -1
+anchor_left = 0.28
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 0.28
 anchor_bottom = 1.0
-offset_left = -173.0
+offset_left = -168.59998
 offset_top = -616.0
-offset_right = 174.0
+offset_right = 178.40002
 offset_bottom = -93.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -217,7 +233,6 @@ texture = ExtResource("4_mrfpk")
 position = Vector2(1265, 434)
 texture = ExtResource("5_4pqbp")
 
-
 [node name="music_intro" parent="." instance=ExtResource("7_gih0s")]
 
 [node name="Intro" type="Control" parent="."]
@@ -266,7 +281,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_wqme5")
 libraries = {
 &"": SubResource("AnimationLibrary_k33u3")
 }
-
 
 [connection signal="pressed" from="BoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="BoxContainer/Help" to="." method="_on_help_pressed"]
