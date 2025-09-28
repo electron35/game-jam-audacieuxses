@@ -1,16 +1,108 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4oojk4mqe1nm"]
+[gd_scene load_steps=20 format=3 uid="uid://b4oojk4mqe1nm"]
 
 [ext_resource type="Theme" uid="uid://bdppe4xcscq8r" path="res://Resources/MenuTheme.tres" id="1_5wsvm"]
 [ext_resource type="Script" uid="uid://ccb7k08bua3kc" path="res://Scripts/main_menu.gd" id="1_i2xx2"]
 [ext_resource type="Texture2D" uid="uid://kxkcm5cl8qt6" path="res://Assets/UI/Tuto/onboarding_to_move.png" id="3_o14dv"]
 [ext_resource type="Texture2D" uid="uid://cjxmxyuaogpt3" path="res://Assets/UI/Tuto/ui_onboarding_aiming.png" id="4_mrfpk"]
 [ext_resource type="Texture2D" uid="uid://by665b8kqx61r" path="res://Assets/UI/Tuto/ui_onboarding_shoot2.png" id="5_4pqbp"]
+[ext_resource type="Texture2D" uid="uid://dlqj72lm81mim" path="res://Assets/UI/narration_clean1.png" id="6_gih0s"]
+[ext_resource type="Texture2D" uid="uid://dxirpfaqeqs8w" path="res://Assets/UI/narration_clean2.png" id="7_k33u3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i2xx2"]
 font_size = 176
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7lva"]
 bg_color = Color(0.43904907, 0.43904915, 0.43904895, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gih0s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jewm6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k33u3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lrjdf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wqme5"]
+
+[sub_resource type="Animation" id="Animation_gih0s"]
+resource_name = "FirstFadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NarrationClean1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_k33u3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NarrationClean1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NarrationClean2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lrjdf"]
+resource_name = "FirstFadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NarrationClean1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wqme5"]
+resource_name = "SecondFadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NarrationClean2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k33u3"]
+_data = {
+&"FirstFadeIn": SubResource("Animation_gih0s"),
+&"FirstFadeOut": SubResource("Animation_lrjdf"),
+&"RESET": SubResource("Animation_k33u3"),
+&"SecondFadeIn": SubResource("Animation_wqme5")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -114,7 +206,54 @@ texture = ExtResource("4_mrfpk")
 position = Vector2(1265, 434)
 texture = ExtResource("5_4pqbp")
 
+[node name="Intro" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Intro"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NarrationClean2" type="Sprite2D" parent="Intro"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(955.0001, 561.0002)
+scale = Vector2(0.46008065, 0.46008065)
+texture = ExtResource("7_k33u3")
+
+[node name="NarrationClean1" type="Sprite2D" parent="Intro"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(951, 536)
+scale = Vector2(0.44374993, 0.44375)
+texture = ExtResource("6_gih0s")
+
+[node name="IntroButton" type="Button" parent="Intro"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gih0s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jewm6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k33u3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lrjdf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wqme5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Intro"]
+libraries = {
+&"": SubResource("AnimationLibrary_k33u3")
+}
+
 [connection signal="pressed" from="BoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="BoxContainer/Help" to="." method="_on_help_pressed"]
 [connection signal="pressed" from="BoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Tuto/QuitTuto" to="." method="_on_quit_tuto_pressed"]
+[connection signal="pressed" from="Intro/IntroButton" to="." method="_on_intro_button_pressed"]
