@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d4a3t8yuyh307"]
+[gd_scene load_steps=14 format=3 uid="uid://d4a3t8yuyh307"]
 
 [ext_resource type="Script" uid="uid://bqolw5iehqdig" path="res://Scripts/Player/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://0lrkciq870up" path="res://Scripts/Player/dialog.gd" id="2_6t5aa"]
@@ -6,6 +6,9 @@
 [ext_resource type="SpriteFrames" uid="uid://bxtbhsvady6ta" path="res://Resources/Animation/wand.tres" id="2_svftf"]
 [ext_resource type="PackedScene" uid="uid://kub2doyo41y3" path="res://Scenes/UI/TimerClock.tscn" id="4_a1rq5"]
 [ext_resource type="Theme" uid="uid://dcgcd5sggj3c" path="res://Resources/GameTheme.tres" id="4_ofjh0"]
+[ext_resource type="Script" uid="uid://c3v5q0ahgfgcm" path="res://Scripts/Player/UI_Scoring.gd" id="4_y18yp"]
+[ext_resource type="Texture2D" uid="uid://bxjefmtxeo3bg" path="res://Assets/UI/ui_male_tears.png" id="5_2hnfo"]
+[ext_resource type="Texture2D" uid="uid://d1ron4cpjak47" path="res://Assets/UI/ui_male_tears_fill.png" id="5_85s6f"]
 [ext_resource type="Texture2D" uid="uid://lo3yp5d26tuj" path="res://Assets/UI/viseur.png" id="5_yqx0t"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_v0iea"]
@@ -48,8 +51,34 @@ mouse_filter = 2
 position = Vector2(1602.0001, 768.00006)
 scale = Vector2(0.24999993, 0.24999996)
 sprite_frames = ExtResource("2_svftf")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="UiMaleTears" type="Sprite2D" parent="Head/Camera3D/UIControl"]
+position = Vector2(130.5, 677.6009)
+scale = Vector2(0.78614455, 0.7861446)
+texture = ExtResource("5_2hnfo")
+script = ExtResource("4_y18yp")
+
+[node name="ProgressBar" type="TextureProgressBar" parent="Head/Camera3D/UIControl/UiMaleTears"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -165.99998
+offset_top = -376.01343
+offset_right = -167.27205
+offset_bottom = -518.2241
+grow_horizontal = 2
+grow_vertical = 2
+fill_mode = 3
+nine_patch_stretch = true
+texture_progress = ExtResource("5_85s6f")
+tint_over = Color(0, 0.4159855, 0.47436035, 1)
+tint_progress = Color(0, 1, 1, 1)
 
 [node name="DialogBox" type="Control" parent="Head/Camera3D/UIControl"]
+visible = false
 layout_mode = 1
 anchor_right = 0.9990001
 anchor_bottom = 0.998
@@ -116,6 +145,7 @@ debug_shape_custom_color = Color(1, 0, 0, 0.5058824)
 debug_shape_thickness = 5
 script = ExtResource("2_cvnsp")
 
+[connection signal="animation_finished" from="Head/Camera3D/UIControl/Wand" to="." method="_on_wand_animation_finished"]
 [connection signal="visibility_changed" from="Head/Camera3D/UIControl/DialogBox" to="." method="_on_dialog_box_visibility_changed"]
 [connection signal="pressed" from="Head/Camera3D/UIControl/DialogBox/Choice1" to="Head/Camera3D/UIControl/DialogBox" method="_on_choice_1_pressed"]
 [connection signal="pressed" from="Head/Camera3D/UIControl/DialogBox/Choice2" to="Head/Camera3D/UIControl/DialogBox" method="_on_choice_2_pressed"]
