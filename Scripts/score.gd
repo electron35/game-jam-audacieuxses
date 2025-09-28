@@ -1,11 +1,12 @@
 extends Control
 
-@onready var ui_winning: Sprite2D = $UiWinning
-@onready var ui_game_over: Sprite2D = $UiGameOver
+@onready var text_good_end: Label = $TextGoodEnd
 @onready var option_good_end_3: Sprite2D = $OptionGoodEnd3
 @onready var label: Label = $Label
+@onready var text_game_over: Label = $TextGameOver
 @onready var music_bad_end: AudioStreamPlayer = $music_bad_end
 @onready var music_good_end: AudioStreamPlayer = $music_good_end
+@onready var option_bad_end: Sprite2D = $OptionBadEnd
 
 
 func _ready() -> void:
@@ -15,14 +16,17 @@ func _ready() -> void:
 	var text = "Vous avez remplis " + str(int(percent)) + "% de la fiole"
 	label.text = text
 	if percent < 15:
-		ui_winning.visible = false
+		text_good_end.visible = false
 		option_good_end_3.visible = false
-		ui_game_over.visible = true
+		option_bad_end.visible = true
+		text_game_over.visible = true
+		
 		music_bad_end.play()
 	else:
-		ui_game_over.visible = false
 		option_good_end_3.visible = true
-		ui_winning.visible = true
+		option_bad_end.visible = false
+		text_game_over.visible = false
+		text_good_end.visible = true
 		music_good_end.play(	)
 	
 

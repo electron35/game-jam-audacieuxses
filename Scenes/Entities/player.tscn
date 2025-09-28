@@ -80,7 +80,6 @@ tint_over = Color(0, 0.4159855, 0.47436035, 1)
 tint_progress = Color(0, 1, 1, 1)
 
 [node name="DialogBox" type="Control" parent="Head/Camera3D/UIControl"]
-visible = false
 layout_mode = 1
 anchor_right = 0.9990001
 anchor_bottom = 0.998
