@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckcnkolt8v7mm"
-path="res://.godot/imported/witch_right_arm_throw2.png-b438196c639e2666429c009704b27ab3.ctex"
+uid="uid://cej5q0anpdmow"
+path="res://.godot/imported/right_arm_idle4.png-7c8d63cfcc15ad504d8011d01d21faba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/Wand/witch_right_arm_throw2.png"
-dest_files=["res://.godot/imported/witch_right_arm_throw2.png-b438196c639e2666429c009704b27ab3.ctex"]
+source_file="res://Assets/UI/Wand/Idle/right_arm_idle4.png"
+dest_files=["res://.godot/imported/right_arm_idle4.png-7c8d63cfcc15ad504d8011d01d21faba.ctex"]
 
 [params]
 

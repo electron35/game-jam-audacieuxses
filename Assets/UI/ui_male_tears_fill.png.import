@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pirq0xudut36"
-path="res://.godot/imported/right_arm_throw_rough1.png-906fa1ac0a3e77b33c85773b623a4836.ctex"
+uid="uid://d1ron4cpjak47"
+path="res://.godot/imported/ui_male_tears_fill.png-56160447e0226880a23fa26fcd9f8a85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/Wand/right_arm_throw_rough1.png"
-dest_files=["res://.godot/imported/right_arm_throw_rough1.png-906fa1ac0a3e77b33c85773b623a4836.ctex"]
+source_file="res://Assets/UI/ui_male_tears_fill.png"
+dest_files=["res://.godot/imported/ui_male_tears_fill.png-56160447e0226880a23fa26fcd9f8a85.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://egv76ku1dro3"
-path="res://.godot/imported/witch_right_arm_throw3.png-9306442b4f88cf65ed0fcf720917baa0.ctex"
+path="res://.godot/imported/witch_right_arm_throw3.png-fe70b0db9372b2f3ff709bb026627418.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/Wand/witch_right_arm_throw3.png"
-dest_files=["res://.godot/imported/witch_right_arm_throw3.png-9306442b4f88cf65ed0fcf720917baa0.ctex"]
+source_file="res://Assets/UI/Wand/Shoot/witch_right_arm_throw3.png"
+dest_files=["res://.godot/imported/witch_right_arm_throw3.png-fe70b0db9372b2f3ff709bb026627418.ctex"]
 
 [params]
 
