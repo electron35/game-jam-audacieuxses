@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_k8n0x")
 name = "Rascal Prout"
-strongChoice = "Ba alors, tu va nous faire une grosses colère ? Et c'est les femmes qui sont trop émotives ?"
+strongChoice = "Bah alors, tu va nous faire une grosses colère ? Et c'est les femmes qui sont trop émotives ?"
 strongResponse = "C'est insupportable votre attitude!"
 UnarmedFace = ExtResource("2_tcj3a")
 HurtedFace = ExtResource("1_n7kmv")

@@ -1,7 +1,6 @@
 extends Sprite2D
 
 @onready var progress_bar: TextureProgressBar = $ProgressBar
-@onready var male_tears_filling: AudioStreamPlayer = $male_tears_filling
 
 func _process(delta: float) -> void:
 	var maxScore:float = Global.MaxScore
